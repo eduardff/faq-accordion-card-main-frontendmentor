@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  color: hsl(238, 29%, 16%);
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  margin-inline: 1em;
+  background-color: #fff;
+  width: 375px;
+  height: 630px;
+  padding: 3rem 2rem;
+  border-radius: 2em;
+  position: relative;
+}
+@media screen and (min-width: 50em) {
+  .box {
+    display: flex;
+    width: 1000px;
+    height: 550px;
+    overflow: hidden;
+  }
+}
+.image {
+  position: absolute;
+  top: -8.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+}
+
+.two {
+  top: 1.6em;
+  position: absolute;
+  left: 17%;
+}
+@media screen and (min-width: 50em) {
+  .image-container {
+    position: relative;
+    flex: 1;
+  }
+  .image {
+    position: absolute;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-25%, -50%);
+  }
+  .two {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-18%, -40%);
+  }
+}
+.accordion {
+  margin-top: 7rem;
+}
+@media screen and (min-width: 50em) {
+  .accordion {
+    margin-top: 3rem;
+    flex: 1;
+  }
+}
+.accordion h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+@media screen and (min-width: 50em) {
+  .accordion h2 {
+    text-align: left;
+  }
+}
+.accordion > div {
+  padding: 1.3em 0;
+  border-bottom: 1px solid hsla(240, 6%, 50%, 0.5);
+}
+@media screen and (min-width: 50em) {
+  .accordion > div {
+    width: 80%;
+  }
+}
+.accordion p {
+  font-size: 0.8em;
+}
+.accordion button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.accordion span {
+  transition: transform 0.1s;
+}
+.accordion button:hover {
+  color: hsl(14, 88%, 65%);
+}
+.accordion__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms;
+}
+.accordion__content > p {
+  overflow: hidden;
+  font-weight: 400;
+}
+.wrapper {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.arroba-img {
+  display: none;
+}
+@media screen and (min-width: 50em) {
+  .arroba-img {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    transform: translate(-60%, 38%);
+  }
+}
+.open {
+  grid-template-rows: 1fr;
+  margin: 0.8em 0;
+}
+
+.arrow-active {
+  transform: rotate(180deg);
+}
